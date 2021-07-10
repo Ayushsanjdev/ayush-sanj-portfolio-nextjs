@@ -1,7 +1,14 @@
-import 'tailwindcss/tailwind.css'
+import Image from 'next/image'
+import cover from '../public/cover.svg' 
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>Hello</div>
-  )
+    <div>
+    <header>
+      <Image alt="logo" src={cover} />
+    </header>
+  </div>
+  ) 
 }
+
+export default Home
