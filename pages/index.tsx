@@ -3,21 +3,36 @@ import cover from "../public/cover.svg";
 import profile from "../public/profile.jpg";
 import { motion } from "framer-motion";
 
-const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Blogs", href: "#" },
-];
-
-const variants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0.4 }
-}
-
 const Home = () => {
+  const navigation = [
+    { name: "Home", href: "#" },
+    { name: "Projects", href: "#" },
+    { name: "Blogs", href: "#" },
+  ];
+
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0.4 },
+  };
+
+  const list = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
+
   return (
-    <motion.div className="mx-auto my-0" 
-      initial="hidden" animate="visible" variants={variants}>
+    <motion.div
+      className="mx-auto my-0"
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 1 }}
+    >
       <header className="flex justify-between mt-4 px-4 py-4">
         <Image
           alt="my-picture"
@@ -50,19 +65,45 @@ const Home = () => {
             Turning designs into a functional, <br />
             aesthetically pleasing user interface
           </p>
-          <motion.div animate={{rotate: 360}} transition={{duration: 1.5}} className="flex justify-center p-4">
-            <img src="https://img.icons8.com/color/48/000000/react-native.png"/>
-            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
-            <img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
-            <img src="https://img.icons8.com/color/48/000000/npm.png"/>
-            <img src="https://img.icons8.com/color/48/000000/firebase.png"/>
-            <img src="https://img.icons8.com/color/48/000000/css3.png"/>
-          </motion.div>
+          <motion.ul
+            variants={list}
+            initial="hidden"
+            animate="visible"
+            className="flex justify-center p-4"
+          >
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/react-native.png" />
+            </motion.li>
+
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" />
+            </motion.li>
+
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" />
+            </motion.li>
+
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/npm.png" />
+            </motion.li>
+
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/firebase.png" />
+            </motion.li>
+
+            <motion.li variants={item}>
+              <img src="https://img.icons8.com/color/48/000000/css3.png" />
+            </motion.li>
+          </motion.ul>
         </div>
-        <motion.div whileHover={{
-          scale: 1.2,
-          transition: { duration: 1 },}}
-          whileTap={{ scale: 0.9 }} className="w-1/2">
+        <motion.div
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-1/2"
+        >
           <Image alt="logo" src={cover} className="w-full" />
         </motion.div>
       </section>
