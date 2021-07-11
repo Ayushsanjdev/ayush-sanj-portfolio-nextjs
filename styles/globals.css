@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
+  /* * {
+    @apply border-2;
+  } */
   body {
-    @apply max-w-screen-lg;
+    @apply max-w-screen-lg mx-auto my-0;
   }
-} */
+}
