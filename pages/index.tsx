@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import Header from "../components/head"
 import Introduction from "../components/introduction"
+import Projects from "../components/projects";
 
 const Home = () => {
 
@@ -15,11 +16,12 @@ const Home = () => {
       initial="hidden"
       animate="visible"
       variants={variants}
-      transition={{ duration: 1 }}
+      transition={{ duration: 2 }}
     >
       <Header/>
-      <Introduction/>
-      
+      <Introduction 
+        variants={variants} />
+      <Projects/>
     </motion.div>
   );
 };

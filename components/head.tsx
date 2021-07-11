@@ -20,7 +20,7 @@ const Header = () => {
           height={50}
           className="rounded-full"
         />
-        <nav className="md:block ml-10 pr-4 space-x-8">
+        <nav className="md:block ml-10 pr-4 space-x-16">
           {navigation.map((links) => (
             <a
               key={links.name}
