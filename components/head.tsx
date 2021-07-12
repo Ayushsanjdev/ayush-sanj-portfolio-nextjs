@@ -5,11 +5,12 @@ import { motion } from 'framer-motion'
 
 const Header = () => {
 
-  // const navigation = [
-    // { name: "Home", href: "#" },
-    // { name: "Projects", href: "#" },
-    // { name: "Blogs", href: "#" },
-  // ];
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Blogs", href: "/blogs" },
+  ];
 
 
   return (
@@ -22,15 +23,15 @@ const Header = () => {
           className="rounded-full"
         />
         <nav className="md:block ml-10 pr-4 space-x-16">
-          <Link href="/components/projects">
-            {/* {navigation.map((links) => ( */}
+            {navigation.map((links) => (
+              <Link key={links.name} passHref={true} href={links.href}>
               <a
+                key={links.name} href={links.href}
                 className="font-medium text-gray-500 hover:text-gray-900 align-middle"
               >
-                {/* {links.name} */} Projects
-              </a>
-            {/* ))} */}
-          </Link>
+                {links.name}
+              </a></Link>
+            ))}
         </nav>
       </header>
   )

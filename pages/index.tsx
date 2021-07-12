@@ -24,13 +24,13 @@ const Home = () => {
       initial="hidden"
       animate="visible"
       variants={variants}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1.5 }}
     >
       <Header/>
       <Introduction 
         variants={variants} />
-      <Projects/>
-      <Blogs/>
+      {/* <Projects/>
+      <Blogs/> */}
     </motion.div>
   );
 };

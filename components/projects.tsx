@@ -30,4 +30,4 @@ const Projects = (props: Props) => {
   )
 }
 
-export default Projects;
+export default Projects
