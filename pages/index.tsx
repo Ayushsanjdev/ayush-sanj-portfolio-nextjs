@@ -29,13 +29,8 @@ const Home = () => {
       <Header/>
       <Introduction 
         variants={variants} />
-<<<<<<< HEAD
       {/* <Projects/>
       <Blogs/> */}
-=======
-      <Projects/>
-      <Blogs/>
->>>>>>> cffc60a1e0e366afe6c2d0882266992a5dc7c147
     </motion.div>
   );
 };
