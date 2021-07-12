@@ -1,9 +1,17 @@
+// import { useState } from "react"
 import { motion } from "framer-motion"
+import Blogs from "../components/blogs"
 import Header from "../components/head"
 import Introduction from "../components/introduction"
-import Projects from "../components/projects";
+import Projects from "../components/projects"
 
 const Home = () => {
+
+  // const[initial, setInitial] = useState('home')
+  // const [home, setHome] = useState(false)
+  // const [projects, setProjects] = useState(false)
+  // const [blogs, setBlogs] = useState(false)
+
 
   const variants = {
     visible: { opacity: 1 },
@@ -22,6 +30,7 @@ const Home = () => {
       <Introduction 
         variants={variants} />
       <Projects/>
+      <Blogs/>
     </motion.div>
   );
 };
