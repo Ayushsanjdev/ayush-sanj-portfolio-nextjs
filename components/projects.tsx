@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface Props {
   
@@ -21,6 +22,9 @@ const Projects = (props: Props) => {
             {project.name}
           </a>
         ))}
+        <Link href="/">
+          Back to home
+        </Link>
       </motion.section>
     </motion.div>
   )
