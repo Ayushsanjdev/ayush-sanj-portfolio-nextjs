@@ -1,9 +1,7 @@
 // import { useState } from "react"
 import { motion } from "framer-motion"
-import Blogs from "../components/blogs"
 import Header from "../components/head"
 import Introduction from "../components/introduction"
-import Projects from "../components/projects"
 
 const Home = () => {
 
