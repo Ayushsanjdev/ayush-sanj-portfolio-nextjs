@@ -1,14 +1,15 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import profile from '../public/profile.jpg'
 import { motion } from 'framer-motion'
 
 const Header = () => {
 
-  const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Blogs", href: "#" },
-  ];
+  // const navigation = [
+    // { name: "Home", href: "#" },
+    // { name: "Projects", href: "#" },
+    // { name: "Blogs", href: "#" },
+  // ];
 
 
   return (
@@ -21,15 +22,15 @@ const Header = () => {
           className="rounded-full"
         />
         <nav className="md:block ml-10 pr-4 space-x-16">
-          {navigation.map((links) => (
-            <a
-              key={links.name}
-              href={links.href}
-              className="font-medium text-gray-500 hover:text-gray-900 align-middle"
-            >
-              {links.name}
-            </a>
-          ))}
+          <Link href="/components/projects">
+            {/* {navigation.map((links) => ( */}
+              <a
+                className="font-medium text-gray-500 hover:text-gray-900 align-middle"
+              >
+                {/* {links.name} */} Projects
+              </a>
+            {/* ))} */}
+          </Link>
         </nav>
       </header>
   )
