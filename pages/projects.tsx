@@ -1,5 +1,10 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
+import Header from '../components/head'
+import snapbookPic from '../public/snapbook.png'
+import memoguyPic from '../public/memoguy.png'
+import todoappPic from '../public/todoapp.png'
 
 interface Props {
   
@@ -8,25 +13,25 @@ interface Props {
 const Projects = (props: Props) => {
 
   const allProjects = [
-    {name: "Snapbook", href: "snapbook.vercel.app"},
-    {name: "Memoguy", href: "memoguy.vercel.app"},
-    {name: "TodoApp", href: "todoapp.vercel.app"}
+    {name: "Snapbook", href: "snapbook.vercel.app", image:{snapbookPic}},
+    {name: "Memoguy", href: "memoguy.vercel.app", image:{memoguyPic}},
+    {name: "TodoApp", href: "todoapp.vercel.app", image:{todoappPic}}
   ];
 
   return (
-    <motion.div className="mx-auto my-0 text-center font-semibold text-3xl">
-      <h1>Projects</h1>
-      <motion.section>
-        {allProjects.map((project) => (
-          <a key={project.name} href={project.href} className="text-xs px-10">
-            {project.name}
-          </a>
-        ))}
-        <Link href="/">
-          Back to home
-        </Link>
-      </motion.section>
-    </motion.div>
+    <>
+      <Header/>
+        <motion.div className="mx-auto my-0 text-center font-semibold text-3xl">
+          <h1>Projects</h1>
+          <motion.section>
+            {allProjects.map((project) => (
+              <a key={project.name} href={project.href} className="text-xs px-10">
+                <Image src={project.image} alt={project.name} />
+              </a>
+            ))}
+          </motion.section>
+        </motion.div>
+    </>
   )
 }
 
