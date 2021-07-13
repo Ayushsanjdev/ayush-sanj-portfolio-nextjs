@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link';
+import Header from '../components/head';
 
 interface Props {
   
@@ -13,17 +14,19 @@ const Blogs = (props: Props) => {
   ];
 
   return (
-    <motion.div className="text-center">
-      <h3 className="text-3xl font-semibold ">Blogs</h3>
-      <motion.section>
-        {allBlogs.map((blogs) => (
-          <a key={blogs.name} href={blogs.href} className="px-10" >
-            {blogs.name}
-          </a>
-        ))}
-        <Link href="/"><a>home</a></Link>
-      </motion.section>
-    </motion.div>
+    <>
+      <Header/>
+        <motion.div className="text-center">
+          <h3 className="text-3xl font-semibold ">Blogs</h3>
+          <motion.section>
+            {allBlogs.map((blogs) => (
+              <a key={blogs.name} href={blogs.href} className="px-10" >
+                {blogs.name}
+              </a>
+            ))}
+          </motion.section>
+        </motion.div>
+    </>
   )
 }
 

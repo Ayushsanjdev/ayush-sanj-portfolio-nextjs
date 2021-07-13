@@ -1,7 +1,7 @@
 // import { useState } from "react"
 import { motion } from "framer-motion"
 import Header from "../components/head"
-import Introduction from "../components/introduction"
+import Overview from "../components/overview"
 
 const Home = () => {
 
@@ -25,7 +25,7 @@ const Home = () => {
       transition={{ duration: 1.5 }}
     >
       <Header/>
-      <Introduction 
+      <Overview 
         variants={variants} />
       {/* <Projects/>
       <Blogs/> */}
