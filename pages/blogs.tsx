@@ -26,7 +26,7 @@ const Blogs = (props: Props) => {
       <motion.div initial="hidden" 
         variants={list} transition={{duration: 1}}
         animate="visible" 
-        className="text-center grid grid-cols-2 justify-center p-8">
+        className="text-center grid grid-cols-2 justify-center px-4 py-12">
       {allBlogs.map((blogs) => (
         <motion.section key={blogs.name} initial="hidden"
           animate="visible"
@@ -40,7 +40,7 @@ const Blogs = (props: Props) => {
             >
               <h1 className="text-3xl text-left font-semibold">{blogs.name}</h1>
             </a>
-            <p className="py-2 font-mono text-left">{blogs.detail}</p>
+            <p className="py-2 font-normal text-left">{blogs.detail}</p>
         </motion.section>
         ))}
       </motion.div>
