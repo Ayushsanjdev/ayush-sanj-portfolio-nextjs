@@ -42,7 +42,7 @@ const Projects = (props: Props) => {
           {allProjects.map((project) => (
             <motion.section className="my-8 grid grid-cols-2 mb-8 gap-12 justify-center" 
               initial="hidden" animate="visible" variants={item}
-              transition={{duration: 1}}>
+              transition={{duration: 1}} key={project.name}>
               <motion.a
                 target="_blank"
                 whileHover={{ scale: 1.1 }}
@@ -51,7 +51,7 @@ const Projects = (props: Props) => {
                 href={project.href}
                 className="text-xl px-10"
               >
-                {/* on hover show code or live option - today task*/}
+                {/* on hover show code or live option - feat task*/}
 
               <Image
                 src={project.image}
@@ -59,7 +59,7 @@ const Projects = (props: Props) => {
                 className="rounded-md"
               />
               </motion.a>
-              <motion.p  className="text-2xl w-4/5 self-center"
+              <motion.p className="text-2xl w-4/5 self-center"
                 initial="hidden" animate="visible" variants={item2} transition={{duration: 1.2}}>
                 {project.name} <br/>
                   <span className="text-base text-gray-700">
@@ -67,8 +67,7 @@ const Projects = (props: Props) => {
                   </span>
               </motion.p>
             </motion.section>
-          ))}
-        
+          ))} 
       </motion.div>
     </>
   );

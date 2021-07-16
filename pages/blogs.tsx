@@ -1,43 +1,48 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import Header from "../components/head";
+import { motion } from "framer-motion"
+import Image from "next/image"
+import Link from "next/link"
+import Header from "../components/head"
+import { list, item, item2 } from "../components/overview"
 
 interface Props {}
 
 const Blogs = (props: Props) => {
   const allBlogs = [
     {
-      name: "git commits best practices: 2021",
+      name: "Git commits best practices: 2021",
       href: "https://learnwithayush.hashnode.dev/git-commits-as-a-beginner-best-practices-2021-1",
-      image:
-        "https://learnwithayush.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1619931852966%2Fpy-0VtnO3.jpeg%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75",
+      detail: 'Git best practices u should learn to do every day. Here are the most useful ones -> What Is a Commit in Git? git commit -m "this is a commit message" The "commit" command is used to save your changes to the local repository. Using commits has to be ...'
     },
     {
-      name: "firebase host and deploy: 2021",
+      name: "Firebase host and deploy: 2021",
       href: "https://learnwithayush.hashnode.dev/hosting-and-deploying-step-by-step-explained-firebase-2021",
-      image:
-        "https://learnwithayush.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1620534653568%2FYPHmKp1Wy.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75",
+      detail: "Here I will be showing you step by step: How to host and deploy any web app using firebase -> What is Firebase? Firebase is a Backend as a Service - Baas platform that helps you build your Full-stack web app, Android, and Ios by providing their backe..."
     },
   ];
 
   return (
     <>
       <Header />
-      <motion.div className="text-center">
-        <h3 className="text-3xl font-semibold ">Blogs</h3>
-        <motion.section className="grid grid-cols-2 justify-center my-8">
-          {allBlogs.map((blogs) => (
+      <motion.div initial="hidden" 
+        variants={list} transition={{duration: 1}}
+        animate="visible" 
+        className="text-center grid grid-cols-2 justify-center p-8">
+      {allBlogs.map((blogs) => (
+        <motion.section key={blogs.name} initial="hidden"
+          animate="visible"
+          variants={item2}
+          transition={{ duration: 1 }} className="w-10/12 mx-auto">
             <a
               target="_blank"
               key={blogs.name}
               href={blogs.href}
-              className="px-10"
+              className=""
             >
-              {/* <Image src={blogs.image} alt={blogs.name} /> */}
+              <h1 className="text-3xl text-left font-semibold">{blogs.name}</h1>
             </a>
-          ))}
+            <p className="py-2 font-mono text-left">{blogs.detail}</p>
         </motion.section>
+        ))}
       </motion.div>
     </>
   );
