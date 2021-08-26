@@ -1,4 +1,4 @@
-Make Personal Portfolio with NEXTJS + typescript. 👌✌
+### Make Personal Portfolio with NEXTJS + typescript. 👌✌
 
 Steps: 
 - fork this repository
