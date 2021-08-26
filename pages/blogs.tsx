@@ -34,6 +34,7 @@ const Blogs = (props: Props) => {
           transition={{ duration: 1 }} className="w-10/12 mx-auto">
             <a
               target="_blank"
+              rel="noreferrer"
               key={blogs.name}
               href={blogs.href}
               className=""

@@ -27,7 +27,7 @@ const Overview = (variants: Props) => {
     <section className="flex justify-between gap-8 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8">
       <motion.div transition= {{duration: 1}} initial="hidden" animate="visible" variants={item} className="sm:text-center lg:text-left block self-center">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span className="block xl:inline">I'm Ayush Sanj</span>{" "}
+          <span className="block xl:inline">I'm Ayush Sanj</span>
           <span className="block text-indigo-700 text-center font-thin">
             Frontend Dev
           </span>
@@ -43,27 +43,27 @@ const Overview = (variants: Props) => {
           className="flex justify-center p-4"
         >
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/react-native.png" />
+            <Image alt="I know react" src="https://img.icons8.com/color/48/000000/react-native.png" />
           </motion.li>
 
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" />
+            <Image alt="I know javascript" src="https://img.icons8.com/color/48/000000/javascript--v1.png" />
           </motion.li>
 
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" />
+            <Image alt="I know html5" src="https://img.icons8.com/color/48/000000/html-5--v1.png" />
           </motion.li>
 
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/npm.png" />
+            <Image alt="I know npm package tool" src="https://img.icons8.com/color/48/000000/npm.png" />
           </motion.li>
 
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/firebase.png" />
+            <Image alt="I know firebase" src="https://img.icons8.com/color/48/000000/firebase.png" />
           </motion.li>
 
           <motion.li variants={item} transition= {{duration: 1.5}}>
-            <img src="https://img.icons8.com/color/48/000000/css3.png" />
+            <Image alt="I know css3" src="https://img.icons8.com/color/48/000000/css3.png" />
           </motion.li>
         </motion.ul>
       </motion.div>

@@ -43,7 +43,7 @@ const About = (props: Props) => {
           variants={item2}
           transition={{ duration: 1.4 }}
         >
-          <Image src={aboutCover} className="w-full" />
+          <Image src={aboutCover} alt="aboutMe" className="w-full" />
         </motion.div>
       </section>
     </motion.div>
