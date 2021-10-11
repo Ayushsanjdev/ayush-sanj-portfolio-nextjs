@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <motion.div
-      className="mx-auto my-0 dark:bg-gray-800"
+      className="max-w-5xl mx-auto dark:bg-gray-800 dark:text-white"
       initial="hidden"
       animate="visible"
       variants={variants}

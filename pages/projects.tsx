@@ -38,7 +38,7 @@ const Projects = (props: Props) => {
       <Header />
       <motion.div initial="hidden" animate="visible" variants={list}
         transition={{duration: 1.5}}
-        className="mx-auto my-0 text-center bg-gradient-to-tl font-semibold text-3xl">
+        className="my-0 text-center bg-gradient-to-tl font-semibold text-3xl max-w-5xl mx-auto dark:text-white">
           {allProjects.map((project) => (
             <motion.section className="my-8 grid grid-cols-2 mb-8 gap-12 justify-center" 
               initial="hidden" animate="visible" variants={item}
@@ -59,10 +59,10 @@ const Projects = (props: Props) => {
                 className="rounded-md"
               />
               </motion.a>
-              <motion.p className="text-2xl w-4/5 self-center"
+              <motion.p className="text-2xl w-4/5 self-center "
                 initial="hidden" animate="visible" variants={item2} transition={{duration: 1.2}}>
                 {project.name} <br/>
-                  <span className="text-base text-gray-700">
+                  <span className="text-sm text-gray-700 dark:text-yellow-100">
                     {project.details}
                   </span>
               </motion.p>

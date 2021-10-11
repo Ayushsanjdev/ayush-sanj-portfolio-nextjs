@@ -1,5 +1,6 @@
 {
   "name": "next-portfolio",
+  "author": "ayush-sanj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +15,7 @@
     "framer-motion": "^4.1.17",
     "heroicons": "^1.0.4",
     "heroicons-react": "^1.4.1",
-    "next": "^11.1.0",
+    "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^4.1.3"
