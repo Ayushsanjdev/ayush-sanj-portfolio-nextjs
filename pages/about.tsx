@@ -19,7 +19,7 @@ const About = (props: Props) => {
       <Header />
       <section
         className="text-center p-6 top-1/3 left-1/3 right-1/3
-          h-auto font-semi-bold grid grid-cols-2 justify-center gap-8"
+          h-auto font-semi-bold grid grid-cols-2 justify-center gap-8 max-w-5xl mx-auto"
       >
         <motion.section
           initial="hidden"
