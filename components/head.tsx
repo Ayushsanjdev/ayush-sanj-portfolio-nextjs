@@ -1,23 +1,23 @@
-import { Disclosure, Menu } from '@headlessui/react'
-import {MenuIcon, XIcon } from '@heroicons/react/outline'
-import Image from 'next/image'
-import Profile from '../public/profile.jpg'
-import Link from 'next/link'
+import { Disclosure, Menu } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Image from "next/image";
+import Profile from "../public/profile.jpg";
+import Link from "next/link";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Projects', href: '/projects', current: false },
-  { name: 'Blogs', href: '/blogs', current: false },
-]
+  { name: "Home", href: "/", current: true },
+  { name: "About", href: "/about", current: false },
+  { name: "Projects", href: "/projects", current: false },
+  { name: "Blogs", href: "/blogs", current: false },
+];
 
 function classNames(...classes: any) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
-const Header = () => { 
+const Header = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="dark:bg-gray-800 dark:text-white max-w-5xl mx-auto">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -48,17 +48,19 @@ const Header = () => {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                        <Link
+                      <Link href={item.href} key={item.name}>
+                        <a
                           href={item.href}
-													key={item.name}
-													// className={classNames(
-													// 	item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-													// 	'px-3 py-2 rounded-md text-sm font-medium' 
-													// )}
-                          aria-current={item.current ? 'page' : undefined}
+                          key={item.name}
+                          className={classNames(
+                            "text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-black",
+                            "px-3 py-2 rounded-md text-sm font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
-                        </Link>
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -66,7 +68,13 @@ const Header = () => {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                      <Image className="rounded-full" width={33} height={33} src={Profile} alt="owner image" />
+                    <Image
+                      className="rounded-full"
+                      width={33}
+                      height={33}
+                      src={Profile}
+                      alt="owner image"
+                    />
                   </div>
                 </Menu>
               </div>
@@ -76,24 +84,26 @@ const Header = () => {
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </a>
+                <Link href={item.href} key={item.name}>
+                  <a
+                    href={item.href}
+                    key={item.name}
+                    className={classNames(
+                      "text-gray-300 hover:bg-gray-700 hover:text-white active:bg-gray-800",
+                      "px-3 py-2 rounded-md text-sm font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
               ))}
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
