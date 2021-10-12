@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @layer base {
   /* * {
@@ -8,6 +9,9 @@
   } */
   body {
     @apply mx-auto h-screen dark:bg-gray-800 dark:text-white;
+  }
+  * {
+    font-family: Montserrat;
   }
   /* width */
   ::-webkit-scrollbar {

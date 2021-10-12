@@ -53,7 +53,7 @@ const Header = () => {
                           href={item.href}
                           key={item.name}
                           className={classNames(
-                            "text-gray-300 hover:bg-gray-700 hover:text-white focus:bg-black",
+                            "text-black dark:text-white hover:bg-gray-700 hover:text-white focus:bg-black",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -89,7 +89,7 @@ const Header = () => {
                     href={item.href}
                     key={item.name}
                     className={classNames(
-                      "text-gray-300 hover:bg-gray-700 hover:text-white active:bg-gray-800",
+                      "text-black dark:text-white hover:bg-gray-700 hover:text-white active:bg-gray-800",
                       "px-3 py-2 rounded-md text-sm font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}
