@@ -23,7 +23,7 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="flex justify-between gap-4 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8">
+    <section className="flex justify-between gap-4 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8 h-auto">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"

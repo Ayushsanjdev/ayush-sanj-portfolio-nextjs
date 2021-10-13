@@ -28,9 +28,9 @@ const About = (props: Props) => {
           transition={{ duration: 1 }}
           className="self-center text-left"
         >
-          <h1 className="font-extrabold">Why programming?</h1>
+          <h1 className="text-4xl font-bold">Why programming?</h1>
           <br />
-          <p className="font-mono w-5/6">
+          <p className="w-96 text-base">
             Having fascinated by computers and technology pushed me to choose
             programming. A development-oriented career in the world of
             information technology, where I can research, develop and implement

@@ -62,7 +62,7 @@ const Projects = (props: Props) => {
               <motion.p className="text-2xl w-4/5 self-center "
                 initial="hidden" animate="visible" variants={item2} transition={{duration: 1.2}}>
                 {project.name} <br/>
-                  <span className="text-sm text-gray-700 dark:text-yellow-100">
+                  <span className="text-sm font-normal text-gray-700 dark:text-yellow-100">
                     {project.details}
                   </span>
               </motion.p>

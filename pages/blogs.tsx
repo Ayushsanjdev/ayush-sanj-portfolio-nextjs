@@ -64,7 +64,7 @@ const Blogs = (props: Props) => {
                 </h1>
               </motion.div>
             </a>
-            <p className="py-2 font-normal text-left">{blogs.detail}</p>
+            <p className="py-2 font-light text-left">{blogs.detail}</p>
           </motion.section>
         ))}
       </motion.div>
