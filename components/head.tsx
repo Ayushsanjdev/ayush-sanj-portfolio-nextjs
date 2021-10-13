@@ -53,7 +53,7 @@ const Header = () => {
                           href={item.href}
                           key={item.name}
                           className={classNames(
-                            "text-black dark:text-white hover:bg-gray-700 hover:text-white focus:bg-black",
+                            "text-black dark:text-white hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -61,7 +61,7 @@ const Header = () => {
                           {item.name}
                         </a>
                       </Link>
-                    ))}
+                    ))} 
                   </div>
                 </div>
               </div>
@@ -82,14 +82,14 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col w-4/12">
               {navigation.map((item) => (
                 <Link href={item.href} key={item.name}>
                   <a
                     href={item.href}
                     key={item.name}
                     className={classNames(
-                      "text-black dark:text-white hover:bg-gray-700 hover:text-white active:bg-gray-800",
+                      "text-black dark:text-white hover:bg-gray-700 hover:text-white",
                       "px-3 py-2 rounded-md text-sm font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}

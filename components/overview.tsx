@@ -23,7 +23,7 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="flex justify-between gap-4 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8 h-auto">
+    <section className="flex justify-between gap-4 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8 h-auto w-full">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"
@@ -102,7 +102,7 @@ const Overview = (variants: Props) => {
           transition: { duration: 1.5 },
         }}
         whileTap={{ scale: 0.9 }}
-        className="w-2/5 hide-mobile"
+        className="w-2/5 hidden sm:block"
       >
         <Image alt="logo" src={cover} className="w-full" />
       </motion.div>
