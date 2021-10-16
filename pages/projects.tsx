@@ -40,7 +40,7 @@ const Projects = (props: Props) => {
         transition={{duration: 1.5}}
         className="my-0 text-center bg-gradient-to-tl font-semibold text-3xl max-w-5xl mx-auto dark:text-white">
           {allProjects.map((project) => (
-            <motion.section className="my-8 grid grid-cols-2 mb-8 gap-12 justify-center" 
+            <motion.section className="my-8 sm:grid sm:grid-cols-2 mb-8 sm:gap-12 sm:justify-center px-6" 
               initial="hidden" animate="visible" variants={item}
               transition={{duration: 1}} key={project.name}>
               <motion.a
@@ -49,17 +49,16 @@ const Projects = (props: Props) => {
                 whileTap={{ scale: 0.9 }}
                 key={project.name}
                 href={project.href}
-                className="text-xl px-10"
+                className="text-xl sm:px-10"
               >
-                {/* on hover show code or live option - feat task*/}
 
               <Image
                 src={project.image}
                 alt={project.name}
-                className="rounded-md"
+                className="rounded-md w-full"
               />
               </motion.a>
-              <motion.p className="text-2xl w-4/5 self-center "
+              <motion.p className="text-2xl sm:w-4/5 sm:self-center text-center "
                 initial="hidden" animate="visible" variants={item2} transition={{duration: 1.2}}>
                 {project.name} <br/>
                   <span className="text-sm font-normal text-gray-700 dark:text-yellow-100">

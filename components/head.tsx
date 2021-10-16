@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import Profile from "../public/profile.jpg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -17,7 +18,10 @@ function classNames(...classes: any) {
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="dark:bg-gray-800 dark:text-white max-w-5xl mx-auto">
+    <Disclosure
+      as="nav"
+      className="dark:bg-gray-800 dark:text-white max-w-5xl mx-auto"
+    >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -61,7 +65,7 @@ const Header = () => {
                           {item.name}
                         </a>
                       </Link>
-                    ))} 
+                    ))}
                   </div>
                 </div>
               </div>
@@ -82,7 +86,9 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col w-4/12">
+            <motion.div
+              className="px-2 pt-2 pb-3 flex w-min ml-4 mb-2 rounded dark:bg-gray-900"
+            >
               {navigation.map((item) => (
                 <Link href={item.href} key={item.name}>
                   <a
@@ -98,7 +104,7 @@ const Header = () => {
                   </a>
                 </Link>
               ))}
-            </div>
+            </motion.div>
           </Disclosure.Panel>
         </>
       )}
