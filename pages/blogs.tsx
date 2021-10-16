@@ -14,13 +14,13 @@ const Blogs = (props: Props) => {
       name: "Git commits best practices: 2021",
       href: "https://learnwithayush.hashnode.dev/git-commits-as-a-beginner-best-practices-2021-1",
       detail:
-        'Git best practices u should learn to do every day. Here are the most useful ones -> What Is a Commit in Git? git commit -m "this is a commit message" The "commit" command is used to save your changes to the local repository. Using commits has to be ...',
+        'Git best practices u should learn to do every day. Here are the most usefu...',
     },
     {
       name: "Firebase host and deploy: 2021",
       href: "https://learnwithayush.hashnode.dev/hosting-and-deploying-step-by-step-explained-firebase-2021",
       detail:
-        "Here I will be showing you step by step: How to host and deploy any web app using firebase -> What is Firebase? Firebase is a Backend as a Service - Baas platform that helps you build your Full-stack web app, Android, and Ios by providing their backe...",
+        "Here I will be showing you step by step: How to host and deploy any web app usin...",
     },
   ];
 
@@ -32,7 +32,7 @@ const Blogs = (props: Props) => {
         variants={list}
         transition={{ duration: 1 }}
         animate="visible"
-        className="text-center grid grid-cols-2 justify-center px-4 py-12 max-w-5xl mx-auto"
+        className="text-center sm:grid sm:grid-cols-2 sm:justify-center px-4 py-4 max-w-5xl mx-auto"
       >
         {allBlogs.map((blogs) => (
           <motion.section
@@ -41,7 +41,7 @@ const Blogs = (props: Props) => {
             animate="visible"
             variants={item2}
             transition={{ duration: 1 }}
-            className="w-10/12 mx-auto"
+            className="sm:w-10/12 mx-auto"
           >
             <a
               target="_blank"
@@ -51,6 +51,9 @@ const Blogs = (props: Props) => {
               className=""
             >
               <motion.div>
+                <h1 className="sm:text-3xl text-2xl py-4 text-left font-semibold">
+                  {blogs.name}
+                </h1>
                 <Image
                   src={
                     blogs.name === "Git commits best practices: 2021"
@@ -59,12 +62,11 @@ const Blogs = (props: Props) => {
                   }
                   alt={blogs.name}
                 />
-                <h1 className="text-3xl text-left font-semibold">
-                  {blogs.name}
-                </h1>
               </motion.div>
             </a>
-            <p className="py-2 font-light text-left">{blogs.detail}</p>
+            <p className="py-2 font-thin text-base text-left">
+              {blogs.detail}
+            </p>
           </motion.section>
         ))}
       </motion.div>

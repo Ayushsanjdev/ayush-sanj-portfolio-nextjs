@@ -23,7 +23,7 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="flex justify-between gap-4 mx-auto max-w-7xl px-4 sm:mt-16 sm:px-6 lg:px-8 h-auto w-full">
+    <section className="mt-8 sm:flex block text-center sm:justify-between sm:gap-4 mx-auto max-w-7xl  sm:px-6 lg:px-8 h-auto w-full">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"
@@ -35,11 +35,11 @@ const Overview = (variants: Props) => {
           <span className="block xl:inline dark:text-white">
             I'm Ayush Sanj
           </span>
-          <span className="block text-indigo-700 text-center font-thin dark:text-indigo-500">
+          <span className="block text-indigo-700 text-center text-4xl font-extralight dark:text-indigo-500">
             Frontend Dev
           </span>
         </h1>
-        <p className="mt-3 text-base text-center max-w-min text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 dark:text-yellow-100">
+        <p className="mt-3 text-base text-center sm:max-w-min text-gray-500 sm:mt-5 sm:text-lg  sm:mx-auto md:mt-5 md:text-xl lg:mx-0 dark:text-yellow-100">
           Turning designs into a functional, <br />
           aesthetically pleasing user interface
         </p>
