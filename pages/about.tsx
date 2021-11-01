@@ -16,7 +16,6 @@ const About = (props: Props) => {
       variants={list}
       transition={{ duration: 1 }}
     >
-      <Header />
       <section
         className="text-center p-6 top-1/3 left-1/3 right-1/3
           h-auto font-semi-bold sm:grid sm:grid-cols-2 sm:justify-center gap-8 max-w-5xl mx-auto mt-6"

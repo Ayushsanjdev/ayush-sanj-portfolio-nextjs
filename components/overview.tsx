@@ -23,7 +23,7 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="mt-8 sm:flex block text-center sm:justify-between sm:gap-4 mx-auto max-w-7xl  sm:px-6 lg:px-8 h-auto w-full">
+    <section className="sm:flex block text-center sm:justify-between sm:gap-4 mx-auto max-w-7xl  sm:px-6 lg:px-8 h-auto w-full h-screen">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"
