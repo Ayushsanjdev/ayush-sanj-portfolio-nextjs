@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import Header from "../components/head"
 import Overview from "../components/overview"
+import Head from 'next/head'
 
 const Home = () => {
 
@@ -17,6 +18,11 @@ const Home = () => {
       variants={variants}
       transition={{ duration: 1.5 }}
     >
+      <Head>
+        <title>
+          Ayush Sanj Portfolio - Next App
+        </title>
+      </Head>
       <Header />
       <Overview variants={variants} />
     </motion.div>
