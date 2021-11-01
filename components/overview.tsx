@@ -39,7 +39,7 @@ const Overview = (variants: Props) => {
             Frontend Dev
           </span>
         </h1>
-        <p className="mt-3 text-base text-center sm:max-w-min text-gray-500 sm:mt-5 sm:text-lg  sm:mx-auto md:mt-5 md:text-xl lg:mx-0 dark:text-yellow-100">
+        <p className="mt-3 text-base text-center text-gray-500 sm:mt-5 sm:text-lg  sm:mx-auto md:mt-5 md:text-xl lg:mx-0 dark:text-yellow-100">
           Turning designs into a functional, <br />
           aesthetically pleasing user interface
         </p>
