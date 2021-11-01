@@ -2,6 +2,8 @@ import { motion } from "framer-motion"
 import Header from "../components/head"
 import Overview from "../components/overview"
 import Head from 'next/head'
+import Blogs from './blogs'
+import About from './about'
 
 const Home = () => {
 
@@ -25,6 +27,8 @@ const Home = () => {
       </Head>
       <Header />
       <Overview variants={variants} />
+      <About/>
+      <Blogs/>
     </motion.div>
   );
 };

@@ -26,7 +26,6 @@ const Blogs = (props: Props) => {
 
   return (
     <>
-      <Header />
       <motion.div
         initial="hidden"
         variants={list}
