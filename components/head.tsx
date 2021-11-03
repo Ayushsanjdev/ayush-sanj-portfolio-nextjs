@@ -4,12 +4,13 @@ import Image from "next/image";
 import Profile from "../public/profile.jpg";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import NarutoSign from "../public/naruto-sign.png";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "About", href: "/about", current: false },
-  { name: "Projects", href: "/projects", current: false },
-  { name: "Blogs", href: "/blogs", current: false },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blogs", href: "/blogs" },
 ];
 
 function classNames(...classes: any) {
@@ -38,16 +39,12 @@ const Header = () => {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-10 w-auto"
-                    src="https://img.icons8.com/clouds/100/000000/naruto-sign.png"
-                    alt="my leaf logo"
-                  />
-                  <img
-                    className="hidden lg:block h-10 w-auto"
-                    src="https://img.icons8.com/clouds/100/000000/naruto-sign.png"
-                    alt="my leaf logo"
-                  />
+                  <span className="block lg:hidden">
+                    <Image className="" width={40} height={40} src={NarutoSign} alt="my leaf logo" />
+                  </span>
+                  <span className="hidden lg:block">
+                    <Image className="" width={40} height={40} src={NarutoSign} alt="my leaf logo" />
+                  </span>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
@@ -60,7 +57,6 @@ const Header = () => {
                             "text-black dark:text-white hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
-                          aria-current={item.current ? "page" : undefined}
                         >
                           {item.name}
                         </a>
@@ -86,9 +82,7 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <motion.div
-              className="px-2 pt-2 pb-3 flex w-min ml-4 mb-2 rounded dark:bg-gray-900"
-            >
+            <motion.div className="px-2 pt-2 pb-3 flex w-min ml-4 mb-2 rounded dark:bg-gray-900">
               {navigation.map((item) => (
                 <Link href={item.href} key={item.name}>
                   <a
@@ -98,7 +92,6 @@ const Header = () => {
                       "text-black dark:text-white hover:bg-gray-700 hover:text-white",
                       "px-3 py-2 rounded-md text-sm font-medium"
                     )}
-                    aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
                   </a>

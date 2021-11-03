@@ -35,10 +35,9 @@ const Projects = (props: Props) => {
 
   return (
     <>
-      <Header />
       <motion.div initial="hidden" animate="visible" variants={list}
         transition={{duration: 1.5}}
-        className="my-0 text-center bg-gradient-to-tl font-semibold text-3xl max-w-5xl mx-auto dark:text-white">
+        className="my-0 text-center bg-gradient-to-tl font-semibold text-3xl max-w-5xl mx-auto dark:text-white h-full">
           {allProjects.map((project) => (
             <motion.section className="my-8 sm:grid sm:grid-cols-2 mb-8 sm:gap-12 sm:justify-center px-6" 
               initial="hidden" animate="visible" variants={item}

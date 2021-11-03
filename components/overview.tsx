@@ -1,6 +1,12 @@
-import Image from "next/image";
-import cover from "../public/cover.svg";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import cover from "../public/cover.svg"
+import { motion } from "framer-motion"
+import reactIcon from "../public/react-native.png"
+import cssIcon from "../public/css3.png"
+import firebaseIcon from "../public/firebase.png"
+import htmlIcon from "../public/html-5--v1.png"
+import javascriptIcon from '../public/javascript--v1.png'
+import npmIcon from '../public/npm.png'
 
 interface Props {
   variants: any;
@@ -23,19 +29,19 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="sm:flex block text-center sm:justify-between sm:gap-4 mx-auto max-w-7xl  sm:px-6 lg:px-8 h-auto w-full h-screen">
+    <section className="sm:flex flex justify-center self-center text-center sm:justify-between sm:gap-4 max-w-7xl  sm:px-6 lg:px-8 sm:self-center h-screen">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"
         animate="visible"
         variants={item}
-        className="sm:text-center lg:text-left block self-center"
+        className="sm:text-center lg:text-left block sm:self-center"
       >
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block xl:inline dark:text-white">
             I'm Ayush Sanj
           </span>
-          <span className="block text-indigo-700 text-center text-4xl font-extralight dark:text-indigo-500">
+          <span className="block text-indigo-700 text-center text-5xl font-extralight dark:text-indigo-500">
             Frontend Dev
           </span>
         </h1>
@@ -50,44 +56,44 @@ const Overview = (variants: Props) => {
           className="flex justify-center p-4"
         >
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know react"
-              src="https://img.icons8.com/color/48/000000/react-native.png"
+              src={reactIcon}
             />
           </motion.li>
 
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know javascript"
-              src="https://img.icons8.com/color/48/000000/javascript--v1.png"
+              src={javascriptIcon}
             />
           </motion.li>
 
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know html5"
-              src="https://img.icons8.com/color/48/000000/html-5--v1.png"
+              src={htmlIcon}
             />
           </motion.li>
 
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know npm package tool"
-              src="https://img.icons8.com/color/48/000000/npm.png"
+              src={npmIcon}
             />
           </motion.li>
 
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know firebase"
-              src="https://img.icons8.com/color/48/000000/firebase.png"
+              src={firebaseIcon}
             />
           </motion.li>
 
           <motion.li variants={item} transition={{ duration: 1.5 }}>
-            <img
+            <Image
               alt="I know css3"
-              src="https://img.icons8.com/color/48/000000/css3.png"
+              src={cssIcon}
             />
           </motion.li>
         </motion.ul>
@@ -102,9 +108,9 @@ const Overview = (variants: Props) => {
           transition: { duration: 1.5 },
         }}
         whileTap={{ scale: 0.9 }}
-        className="w-2/5 hidden sm:block"
+        className="w-2/5 hidden sm:flex h-screen self-center"
       >
-        <Image alt="logo" src={cover} className="w-full" />
+        <Image alt="logo" src={cover} className="w-full " />
       </motion.div>
     </section>
   );

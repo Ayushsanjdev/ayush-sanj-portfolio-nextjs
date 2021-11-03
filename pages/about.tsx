@@ -10,7 +10,7 @@ interface Props {}
 const About = (props: Props) => {
   return (
     <motion.div
-      className=""
+      className="h-screen"
       initial="hidden"
       animate="visible"
       variants={list}

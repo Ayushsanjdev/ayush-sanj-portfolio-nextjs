@@ -1,12 +1,12 @@
-import { motion } from "framer-motion"
-import Header from "../components/head"
-import Overview from "../components/overview"
-import Head from 'next/head'
-import Blogs from './blogs'
-import About from './about'
+import { motion } from "framer-motion";
+import Header from "../components/head";
+import Overview from "../components/overview";
+import Head from "next/head";
+import Blogs from "./blogs";
+import About from "./about";
+import Projects from "./projects";
 
 const Home = () => {
-
   const variants = {
     visible: { opacity: 1 },
     hidden: { opacity: 0.4 },
@@ -21,14 +21,13 @@ const Home = () => {
       transition={{ duration: 1.5 }}
     >
       <Head>
-        <title>
-          Ayush Sanj Portfolio - Next App
-        </title>
+        <title>Ayush Sanj Portfolio - Next App</title>
       </Head>
       <Header />
       <Overview variants={variants} />
-      <About/>
-      <Blogs/>
+      <About />
+      <Projects />
+      <Blogs />
     </motion.div>
   );
 };
