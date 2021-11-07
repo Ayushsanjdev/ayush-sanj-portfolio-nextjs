@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import gitImg from "../public/git.jpg";
 import firebaseImg from "../public/firebase.jpg";
-import Link from "next/link";
-import Header from "../components/head";
 import { list, item, item2 } from "../components/overview";
 
 interface Props {}
@@ -14,7 +12,7 @@ const Blogs = (props: Props) => {
       name: "Git commits best practices: 2021",
       href: "https://learnwithayush.hashnode.dev/git-commits-as-a-beginner-best-practices-2021-1",
       detail:
-        'Git best practices u should learn to do every day. Here are the most usefu...',
+        "Git best practices u should learn to do every day. Here are the most usefu...",
     },
     {
       name: "Firebase host and deploy: 2021",
@@ -26,12 +24,13 @@ const Blogs = (props: Props) => {
 
   return (
     <>
+      <h1 className="nav-border">Blogs</h1>
       <motion.div
         initial="hidden"
         variants={list}
         transition={{ duration: 1 }}
         animate="visible"
-        className="text-center sm:grid sm:grid-cols-2 sm:justify-center px-4 py-4 max-w-5xl mx-auto"
+        className="text-center block sm:flex sm:justify-center sm:gap-4 px-4 py-4 max-w-5xl mx-auto h-screen self-center"
       >
         {allBlogs.map((blogs) => (
           <motion.section
@@ -40,7 +39,7 @@ const Blogs = (props: Props) => {
             animate="visible"
             variants={item2}
             transition={{ duration: 1 }}
-            className="sm:w-10/12 mx-auto"
+            className="sm:w-2/3 mx-auto"
           >
             <a
               target="_blank"
@@ -50,9 +49,9 @@ const Blogs = (props: Props) => {
               className=""
             >
               <motion.div>
-                <h1 className="sm:text-3xl text-2xl py-4 text-left font-semibold">
+                <h3 className="sm:text-3xl text-2xl py-4 text-left font-semibold">
                   {blogs.name}
-                </h1>
+                </h3>
                 <Image
                   src={
                     blogs.name === "Git commits best practices: 2021"
@@ -63,9 +62,7 @@ const Blogs = (props: Props) => {
                 />
               </motion.div>
             </a>
-            <p className="py-2 font-thin text-base text-left">
-              {blogs.detail}
-            </p>
+            <p className="py-2 font-thin text-base text-left">{blogs.detail}</p>
           </motion.section>
         ))}
       </motion.div>
