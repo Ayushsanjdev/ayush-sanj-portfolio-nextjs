@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Header from "../components/head"
 import snapbookPic from "../public/snapbook.png"
 import memoguyPic from "../public/memoguy.png"
 import todoappPic from "../public/todoapp.png"
@@ -37,7 +36,8 @@ const Projects = (props: Props) => {
     <>
       <motion.div initial="hidden" animate="visible" variants={list}
         transition={{duration: 1.5}}
-        className="my-0 text-center bg-gradient-to-tl font-semibold text-3xl max-w-5xl mx-auto dark:text-white h-full">
+        className="my-0 text-center bg-gradient-to-tl font-semibold max-w-5xl mx-auto dark:text-white h-full px-4 py-12">
+          <h1 className="nav-border">Projects</h1>
           {allProjects.map((project) => (
             <motion.section className="my-8 sm:grid sm:grid-cols-2 mb-8 sm:gap-12 sm:justify-center px-6" 
               initial="hidden" animate="visible" variants={item}

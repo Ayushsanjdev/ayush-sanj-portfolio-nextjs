@@ -24,12 +24,13 @@ const Blogs = (props: Props) => {
 
   return (
     <>
+      <h1 className="nav-border">Blogs</h1>
       <motion.div
         initial="hidden"
         variants={list}
         transition={{ duration: 1 }}
         animate="visible"
-        className="text-center flex sm:justify-center px-4 py-4 max-w-5xl mx-auto h-screen self-center"
+        className="text-center block sm:flex sm:justify-center sm:gap-4 px-4 py-4 max-w-5xl mx-auto h-screen self-center"
       >
         {allBlogs.map((blogs) => (
           <motion.section
@@ -48,9 +49,9 @@ const Blogs = (props: Props) => {
               className=""
             >
               <motion.div>
-                <h1 className="sm:text-3xl text-2xl py-4 text-left font-semibold">
+                <h3 className="sm:text-3xl text-2xl py-4 text-left font-semibold">
                   {blogs.name}
-                </h1>
+                </h3>
                 <Image
                   src={
                     blogs.name === "Git commits best practices: 2021"

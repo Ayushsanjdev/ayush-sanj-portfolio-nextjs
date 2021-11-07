@@ -29,7 +29,7 @@ export const item2 = {
 
 const Overview = (variants: Props) => {
   return (
-    <section className="sm:flex flex justify-center self-center text-center sm:justify-between sm:gap-4 max-w-7xl  sm:px-6 lg:px-8 sm:self-center h-screen">
+    <section className="sm:flex flex justify-center items-center text-center sm:justify-between sm:gap-4 max-w-7xl sm:px-6 lg:px-8 sm:self-center sm:h-screen overview">
       <motion.div
         transition={{ duration: 1 }}
         initial="hidden"

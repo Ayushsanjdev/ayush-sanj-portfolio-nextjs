@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import NarutoSign from "../public/naruto-sign.png";
 
-const navigation = [
+export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
@@ -54,7 +54,7 @@ const Header = () => {
                           href={item.href}
                           key={item.name}
                           className={classNames(
-                            "text-black dark:text-white hover:bg-gray-700 hover:text-white",
+                            "text-black dark:text-white hover:bg-gray-700 hover:text-white font-semibold",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                         >

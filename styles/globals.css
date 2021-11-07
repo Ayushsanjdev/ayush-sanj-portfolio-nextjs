@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 @layer base {
-  /* * {
-    @apply border-2;
-  } */
   body {
     @apply mx-auto h-screen dark:bg-gray-800 dark:text-white;
   }
   * {
     font-family: Montserrat;
+  }
+  h1 {
+    font-family: 'Mochiy Pop P One', sans-serif;
   }
   /* width */
   ::-webkit-scrollbar {
@@ -33,5 +34,17 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
+  }
+
+  .nav-border {
+    font-size: 1.3rem;
+    border: 2px groove white;
+    width: fit-content;
+    margin: 1.5rem auto;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  .overview {
+    height: 70vh;
   }
 }
